@@ -4,28 +4,31 @@
       <input
         type="email"
         matInput
-        placeholder="Your email"
+        placeholder="{{'su.phEmail' | translate}}"
         ngModel
         name="email"
         required
         email
         #emailInput="ngModel">
-      <mat-error *ngIf="emailInput.hasError('required')">Field must not be empty.</mat-error>
-      <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid.</mat-error>
+      <mat-error *ngIf="emailInput.hasError('required')">{{'su.errEmpty'|translate}}</mat-error>
+      <mat-error *ngIf="!emailInput.hasError('required')">{{'su.errEmail'|translate}}</mat-error>
     </mat-form-field>
-    <mat-form-field hintLabel="Should be at least 6 characters long.">
+    <mat-form-field hintLabel="{{'su.hintPwd'|translate}}">
       <input
         type="password"
         matInput
-        placeholder="Your password"
+        placeholder="{{'su.phPwd'|translate}}"
         ngModel
         name="password"
         required
         minlength="6"
         #pwInput="ngModel">
       <mat-hint align="end">{{pwInput.value?.length}}/6</mat-hint>
-      <mat-error>Has to be at least 6 characters long</mat-error>
+      <mat-error>{{'su.errPwd'|translate}}</mat-error>
     </mat-form-field>
-    <button type="submit" mat-raised-button color="primary" [disabled]="!f.valid">Submit</button>
+    <button type="submit" mat-raised-button color="primary" [disabled]="!f.valid">{{ 'su.btnCreate' | translate }}</button>
   </form>
 </section>
+
+<button (click)="useLanguage('en')">en</button>
+<button (click)="useLanguage('es')">es</button>

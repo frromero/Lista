@@ -1,0 +1,11 @@
+{
+  "su": {
+    "phEmail":"Correo electrónico",
+    "errEmpty":"El campo no puede estar vacío",
+    "errEmail":"El correo no es válido",
+    "hintPwd":"Longitud de al menos 6 caracteres",
+    "phPwd":"Contraseña",
+    "errPwd":"Debe tener, al menos, 6 caracteres",
+    "btnCreate":"Crear cuenta"
+  }
+}

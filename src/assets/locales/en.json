@@ -1,0 +1,11 @@
+{
+  "su": {
+    "phEmail":"Your email",
+    "errEmpty":"Field must not be empty.",
+    "errEmail":"Email is invalid",
+    "hintPwd":"Should be at least 6 characters long",
+    "phPwd":"Your password",
+    "errPwd":"Has to be at least 6 characters long",
+    "btnCreate":"Create account"
+  }
+}
