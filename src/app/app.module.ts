@@ -13,7 +13,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import {AppRoutingModule} from './app-routing.module';
 import {MaterialModule} from './material.module';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './core/home/home.component';
 
@@ -41,7 +41,8 @@ import { HomeComponent } from './core/home/home.component';
     }),
     AppRoutingModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

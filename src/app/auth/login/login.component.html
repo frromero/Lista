@@ -1,3 +1,28 @@
-<p>
-  login works!
-</p>
+<section>
+  <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px" [formGroup]="loginForm">
+    <mat-form-field>
+      <input
+        type="email"
+        matInput
+        placeholder="{{'su.phEmail' | translate}}"
+        name="email"
+        formControlName="email">
+      <mat-error *ngIf="loginForm.controls['email'].hasError('required')">{{'su.errEmpty'|translate}}</mat-error>
+      <mat-error *ngIf="!loginForm.controls['email'].hasError('required')">{{'su.errEmail'|translate}}</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="password"
+        matInput
+        placeholder="{{'su.phPwd'|translate}}"
+        name="password"
+        formControlName="password">
+      <mat-error>{{'login.errPwd'|translate}}</mat-error>
+    </mat-form-field>
+    <button
+      type="submit"
+      mat-raised-button
+      color="primary"
+      [disabled]="loginForm.invalid">{{ 'login.btnLogin' | translate }}</button>
+  </form>
+</section>

@@ -7,5 +7,9 @@
     "phPwd":"Contraseña",
     "errPwd":"Debe tener, al menos, 6 caracteres",
     "btnCreate":"Crear cuenta"
+  },
+  "login": {
+    "errPwd":"La contraseña no puede estar vacía",
+    "btnLogin":"Iniciar sesión"
   }
 }

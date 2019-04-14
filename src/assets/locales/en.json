@@ -7,5 +7,9 @@
     "phPwd":"Your password",
     "errPwd":"Has to be at least 6 characters long",
     "btnCreate":"Create account"
+  },
+  "login": {
+    "errPwd":"Missing password",
+    "btnLogin":"Login"
   }
 }
