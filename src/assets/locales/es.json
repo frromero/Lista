@@ -1,4 +1,5 @@
 {
+  "lang": "EN",
   "su": {
     "phEmail":"Correo electrónico",
     "errEmpty":"El campo no puede estar vacío",
@@ -11,5 +12,10 @@
   "login": {
     "errPwd":"La contraseña no puede estar vacía",
     "btnLogin":"Iniciar sesión"
+  },
+  "header": {
+    "signup": "Registrarse",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión"
   }
 }

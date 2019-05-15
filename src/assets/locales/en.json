@@ -1,4 +1,5 @@
 {
+  "lang": "ES",
   "su": {
     "phEmail":"Your email",
     "errEmpty":"Field must not be empty.",
@@ -11,5 +12,10 @@
   "login": {
     "errPwd":"Missing password",
     "btnLogin":"Login"
+  },
+  "header": {
+    "signup": "Signup",
+    "login": "Login",
+    "logout": "Logout"
   }
 }
