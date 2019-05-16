@@ -9,9 +9,9 @@
     <ul fxLayout fxLayoutGap="10px" class="navigation-items">
       <li><a (click)="changeLang()">{{'lang'|translate}}</a></li>
       <mat-divider [vertical]="true"></mat-divider>
-      <li><a routerLink="/signup">{{'header.signup'|translate}}</a></li>
-      <li><a routerLink="/login">{{'header.login'|translate}}</a></li>
-      <li><a>{{'header.logout'|translate}}</a></li>
+      <li *ngIf="!isAuth"><a routerLink="/signup">{{'header.signup'|translate}}</a></li>
+      <li *ngIf="!isAuth"><a routerLink="/login">{{'header.login'|translate}}</a></li>
+      <li *ngIf="isAuth"><a>{{'header.logout'|translate}}</a></li>
     </ul>
   </div>
 </mat-toolbar>
