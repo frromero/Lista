@@ -9,13 +9,13 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ProductsListComponent } from './products-list/products-list.component';
+import { ShoppingListComponent } from './core/home/shopping-list/shopping-list.component';
 import {AppRoutingModule} from './app-routing.module';
 import {MaterialModule} from './material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HeaderComponent } from './core/header/header.component';
 import { HomeComponent } from './core/home/home.component';
+import { SidenavListComponent } from './core/sidenav-list/sidenav-list.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +23,9 @@ import { HomeComponent } from './core/home/home.component';
     SignupComponent,
     LoginComponent,
     ShoppingListComponent,
-    ProductsListComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,

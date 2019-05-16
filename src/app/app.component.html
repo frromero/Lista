@@ -1,47 +1,9 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav role="navigation">
-    <mat-nav-list>
-      <mat-list-item>
-        <button mat-icon-button (click)="changeLang();sidenav.close();">
-          <mat-icon>language</mat-icon>
-          <span class="nav-caption">{{'lang'|translate}}</span>
-        </button>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <a mat-list-item routerLink="/signup" (click)="sidenav.close();">
-        <mat-icon>face</mat-icon>
-        <span class="nav-caption">{{'header.signup'|translate}}</span>
-      </a>
-      <a mat-list-item routerLink="/login" (click)="sidenav.close();">
-        <mat-icon>input</mat-icon>
-        <span class="nav-caption">{{'header.login'|translate}}</span>
-      </a>
-      <mat-list-item>
-        <button mat-icon-button (click)="sidenav.close();">
-          <mat-icon>eject</mat-icon>
-          <span class="nav-caption">{{'header.logout'|translate}}</span>
-        </button>
-      </mat-list-item>
-    </mat-nav-list>
+    <app-sidenav-list (sidenavClose)="sidenav.close();"></app-sidenav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <div fxHide.gt-xs>
-        <button mat-icon-button (click)="sidenav.toggle();">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-      <div><a routerLink="/">LOGO</a></div>
-      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-          <li><a (click)="changeLang()">{{'lang'|translate}}</a></li>
-          <mat-divider [vertical]="true"></mat-divider>
-          <li><a routerLink="/signup">{{'header.signup'|translate}}</a></li>
-          <li><a routerLink="/login">{{'header.login'|translate}}</a></li>
-          <li><a>{{'header.logout'|translate}}</a></li>
-        </ul>
-      </div>
-    </mat-toolbar>
+    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
     <main>
       <router-outlet></router-outlet>
     </main>

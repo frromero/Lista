@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @Output() sidenavToggle = new EventEmitter<void>();
+
+  constructor(private translate: TranslateService) {}
 
   ngOnInit() {
   }
 
+  changeLang() {
+    if (this.translate.currentLang === 'es') {
+      this.translate.use('en');
+    } else {
+      this.translate.use('es');
+    }
+  }
+
+  onToggleSidenav() {
+    this.sidenavToggle.emit();
+  }
 }

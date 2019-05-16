@@ -1,0 +1,23 @@
+<mat-nav-list>
+  <mat-list-item>
+    <button mat-icon-button (click)="changeLang();onCloseSidenav();">
+      <mat-icon>language</mat-icon>
+      <span class="nav-caption">{{'lang'|translate}}</span>
+    </button>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <a mat-list-item routerLink="/signup" (click)="onCloseSidenav();">
+    <mat-icon>face</mat-icon>
+    <span class="nav-caption">{{'header.signup'|translate}}</span>
+  </a>
+  <a mat-list-item routerLink="/login" (click)="onCloseSidenav();">
+    <mat-icon>input</mat-icon>
+    <span class="nav-caption">{{'header.login'|translate}}</span>
+  </a>
+  <mat-list-item>
+    <button mat-icon-button (click)="onCloseSidenav();">
+      <mat-icon>eject</mat-icon>
+      <span class="nav-caption">{{'header.logout'|translate}}</span>
+    </button>
+  </mat-list-item>
+</mat-nav-list>
