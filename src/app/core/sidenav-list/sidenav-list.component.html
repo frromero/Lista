@@ -14,9 +14,13 @@
     <mat-icon>input</mat-icon>
     <span class="nav-caption">{{'header.login'|translate}}</span>
   </a>
+  <a mat-list-item *ngIf="isAuth" routerLink="/shopping-list" (click)="onCloseSidenav();">
+    <mat-icon>shopping_cart</mat-icon>
+    <span class="nav-caption">{{'header.shoppingList'|translate}}</span>
+  </a>
   <mat-list-item *ngIf="isAuth">
-    <button mat-icon-button (click)="onCloseSidenav();">
-      <mat-icon>eject</mat-icon>
+    <button mat-icon-button (click)="onCloseSidenav();onLogout();">
+      <mat-icon>exit_to_app</mat-icon>
       <span class="nav-caption">{{'header.logout'|translate}}</span>
     </button>
   </mat-list-item>

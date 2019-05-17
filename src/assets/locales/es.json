@@ -16,6 +16,7 @@
   "header": {
     "signup": "Registrarse",
     "login": "Iniciar sesión",
-    "logout": "Cerrar sesión"
+    "logout": "Cerrar sesión",
+    "shoppingList": "Lista de la compra"
   }
 }

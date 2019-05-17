@@ -16,6 +16,7 @@
   "header": {
     "signup": "Signup",
     "login": "Login",
-    "logout": "Logout"
+    "logout": "Logout",
+    "shoppingList": "Shopping list"
   }
 }
